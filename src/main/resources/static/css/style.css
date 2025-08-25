@@ -1292,6 +1292,53 @@ textarea.form-control {
     font-size: 0.9rem;
 }
 
+
+/* ============================= */
+/*  Extra Large Screens (Desktops) */
+/* ============================= */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1200px; /* keep content centered */
+    }
+
+    .hero-container {
+        grid-template-columns: 5fr 7fr; /* adjust ratio for better balance */
+        gap: 4rem;
+    }
+
+    .hero-title {
+        font-size: 4rem; /* slightly smaller so it doesn’t stretch */
+    }
+
+    .hero-subtitle {
+        font-size: 1.6rem;
+    }
+
+    .hero-description {
+        max-width: 550px;
+    }
+
+    .hero-visual-inner {
+        width: 420px;
+        height: 420px;
+    }
+
+    .about-container {
+        grid-template-columns: 5fr 7fr;
+        gap: 5rem;
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(3, 1fr); /* show 3 projects in a row */
+    }
+
+    .contact-container {
+        grid-template-columns: 5fr 7fr;
+        gap: 5rem;
+    }
+}
+
+
 /* Media Queries */
 @media (max-width: 1200px) {
     .hero-title {
@@ -1441,3 +1488,5 @@ textarea.form-control {
         padding: 1.5rem;
     }
 }
+
+
