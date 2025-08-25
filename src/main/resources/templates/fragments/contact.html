@@ -46,8 +46,8 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form action="https://api.web3forms.com/submit" method="post">
-                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+                    <form th:action="@{/send-message}" method="post">
+                        <!-- The hidden access_key input is removed. It's handled by the server now. -->
                         <div class="form-group">
                             <label for="name" class="form-label">Your Name</label>
                             <input type="text" id="name" class="form-control" placeholder="John Doe" name="name" required>
