@@ -1,6 +1,6 @@
 # --- Build Stage ---
-# Use a Maven image to build the application
-FROM maven:3.8-openjdk-17 AS builder
+# Use a Maven image with JDK 21 to build the application
+FROM maven:3.9-eclipse-temurin-21 AS builder
 
 # Set the working directory
 WORKDIR /app
@@ -14,8 +14,8 @@ RUN mvn clean package -DskipTests
 
 
 # --- Run Stage ---
-# Use a lightweight JRE image for the final container
-FROM openjdk:17-slim
+# Use a lightweight JDK 21 image for the final container
+FROM openjdk:21-slim
 
 # Set the working directory
 WORKDIR /app
