@@ -1,50 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-</head>
-<body>
-<section class="section" id="projects">
-    <div class="container">
-        <div class="section-title-container">
-            <h2 class="section-title">My Work</h2>
-            <p class="section-subtitle">Explore some of my recent work.</p>
-        </div>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="project-section">
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-title-container">
+                <h2 class="section-title">My Work</h2>
+                <p class="section-subtitle">Explore some of my recent work.</p>
+            </div>
 
-        <div class="projects-container">
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="/images/weather.jpg" alt="Weather Dashboard" />
-                    <div class="project-overlay"></div>
-                    <div class="project-tags">
-                        <div class="project-tag">React</div>
-                        <div class="project-tag">Bootstrap</div>
-                        <div class="project-tag">Weather API</div>
-                        <div class="project-tag">HTML</div>
-                        <div class="project-tag">JavaScript</div>
+            <div class="projects-container">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="/images/weather.jpg" alt="Weather Dashboard" />
+                        <div class="project-overlay"></div>
+                        <div class="project-tags">
+                            <div class="project-tag">React</div>
+                            <div class="project-tag">Bootstrap</div>
+                            <div class="project-tag">Weather API</div>
+                            <div class="project-tag">HTML</div>
+                            <div class="project-tag">JavaScript</div>
+                        </div>
                     </div>
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title">Weather Dashboard</h3>
-                    <p class="project-description">
-                        The Weather Dashboard is an interactive web application built using React.js that allows users to check real-time weather conditions for any city worldwide. It integrates the OpenWeatherMap API to fetch live weather data and displays temperature, humidity, wind speed, and current conditions in a responsive UI.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://github.com/Suryakumarkv/WeatherWidget" target="_blank" class="project-link">
-                            <i class="fa-brands fa-github"></i> View Code
-                        </a>
-
+                    <div class="project-content">
+                        <h3 class="project-title">Weather Dashboard</h3>
+                        <p class="project-description">
+                            The Weather Dashboard is an interactive web application built using React.js that allows users to check real-time weather conditions for any city worldwide. It integrates the OpenWeatherMap API to fetch live weather data and displays temperature, humidity, wind speed, and current conditions in a responsive UI.
+                        </p>
+                        <div class="project-link">
+                            <a th:href="https://github.com/Suryakumarkv/WeatherWidget.git" class="project-link">
+                                <i class="fa-brands fa-github"></i> View Code
+                            </a>
+                            <a th:href="@{/weather}" class="project-link">
+                                <i class="fa-solid fa-globe"></i> View Dashboard
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-<div id="root"></div>
-<script type="module" src="/src/main.jsx"></script>
-</body>
+    </section>
+</th:block>
 </html>
