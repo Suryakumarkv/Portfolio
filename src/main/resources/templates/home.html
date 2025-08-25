@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surya Kumar K V - Personal Portfolio</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BqaG1nY9g41lrT3xaL0YkMmqj7t27p6ne0Kw0JQ5Gx9Q8WsCwYtHfwC8C7Xr6K8DA=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- Loading animation -->
+<div th:replace="~{fragments/loader :: loader}"></div>
+
+<!-- Header -->
+<div th:replace="~{fragments/header :: site-header}"></div>
+
+<!-- Hero Section -->
+<div th:replace="~{fragments/hero :: hero-section}"></div>
+
+<!-- About Section -->
+<div th:replace="~{fragments/about :: about-section}"></div>
+
+<!-- Projects Section -->
+<div th:replace="~{fragments/project :: project-section}"></div>
+
+<div th:replace="~{fragments/experience :: experience-section}"></div>
+
+<!--Achievements section-->
+<div th:replace="~{fragments/achievements :: achievements-section}"></div>
+
+
+<div th:replace="~{fragments/contact :: contact-section}"></div>
+
+<div th:replace="~{fragments/footer :: footer-section}"></div>
+
+<!-- Background Shapes -->
+<div class="floating-shape shape-1"></div>
+<div class="floating-shape shape-2"></div>
+<div class="floating-shape shape-3"></div>
+
+<!-- Custom Script -->
+<script src="/js/script.js"></script>
+</body>
+</html>
+
